@@ -12,6 +12,7 @@ const saveData = (data) => {
     localStorage.setItem('data', str);
 };
 
+//FUNCTION TO RETURN A JSON
 const getData = () => {
     const value = localStorage.getItem("data") || "";
     return JSON.parse(value);
@@ -32,3 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 });
+
+export {getData, saveData};
